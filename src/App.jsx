@@ -1,6 +1,7 @@
 import User from './components/User'
 import Card from './components/Card'
 import { useEffect, useState } from 'react'
+import dataJson from './data.json'
 import './App.css'
 
 function App() {
@@ -8,11 +9,11 @@ function App() {
   const [data, setData] = useState([])
   const [typeData, setTypeData] = useState("weekly")
 
-  const getData = () => {
+  /*const getData = () => {
     fetch("../data.json")
     .then(response => response.json())
     .then(data => setData(data))
-  }
+  }*/
 
   const handleClick = (e) => {
     setTypeData(e.target.textContent.toLowerCase())
@@ -30,7 +31,8 @@ function App() {
   
   useEffect(() => {
     document.querySelectorAll(".user-container__body h3")[1].classList.add("is-selected")
-    getData()
+    /*getData()*/
+    setData(dataJson)
   },[])
 
 
