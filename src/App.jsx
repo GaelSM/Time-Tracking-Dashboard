@@ -9,8 +9,13 @@ function App() {
   const [data, setData] = useState([])
   const [typeData, setTypeData] = useState("weekly")
 
+<<<<<<< HEAD
   /*const getData = () => {
     fetch("../data.json")
+=======
+  const getData = () => {
+    fetch("../../data.json")
+>>>>>>> e61752fe91ba03194a88af7b0d1abe7b8da83fea
     .then(response => response.json())
     .then(data => setData(data))
   }*/
